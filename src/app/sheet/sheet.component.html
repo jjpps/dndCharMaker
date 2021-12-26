@@ -6,7 +6,7 @@
     </div>
 
     <div class="col-10">
-      <form [formGroup]="checkoutForm">
+      <form [formGroup]="checkoutForm" class="form">
 
         <div class="text-center">
           <div class="shadow-lg p-3 mb-5 bg-white rounded">
@@ -17,13 +17,13 @@
             <br>
             <br>
             <div class="row collapse " id="Base">
-              <div class="col-4">
+              <div class="col-sm-4">
                 <div class="form-floating">
                   <input type="text" class="form-control" id="nomeChar" placeholder="Baldur">
                   <label for="nomeChar">Nome do Personagem</label>
                 </div>
               </div>
-              <div class="col-8">
+              <div class="col-sm-8">
                 <div class="row">
                   <div class="col-3">
                     <div class="form-floating">
@@ -32,21 +32,21 @@
                       <label for="Class">Classe</label>
                     </div>
                   </div>
-                  <div class="col-2">
+                  <div class="col-sm-2">
                     <div class="form-floating">
                       <input type="text" class="form-control" id="Level" placeholder="Level" data-bs-toggle="tooltip"
                         data-bs-placement="top" title="Level">
                       <label for="Level">Level</label>
                     </div>
                   </div>
-                  <div class="col-3">
+                  <div class="col-sm-3">
                     <div class="form-floating">
                       <input type="text" class="form-control" id="Antecedente" placeholder="Antecedente"
                         data-bs-toggle="tooltip" data-bs-placement="top" title="Antecedente">
                       <label for="Antecedente">Antecedente</label>
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-sm">
                     <div class="form-floating">
                       <input type="text" class="form-control" id="NomeJogador" placeholder="Nome Jogador"
                         data-bs-toggle="tooltip" data-bs-placement="top" title="Nome do Jogador">
@@ -240,6 +240,67 @@
 
             </div>
             <!--fim informações atributos-->
+
+            <!--inicio informações antecedentes-->
+            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="collapse"
+              data-bs-target="#antecedentes" aria-expanded="false" aria-controls="antecedentes"> Antecedentes </button>
+            <br>
+            <br>
+            <div class="row collapse" id="antecedentes">
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    TRAÇOS DE PERSONALIDADE
+                  </div>
+                  <div class="card-body">
+                    <textarea class="form-control" id="Personalidadetraco" style="height: 100px"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    IDEAIS
+                  </div>
+                  <div class="card-body">
+                    <textarea class="form-control" id="PersonalidadeIdeais" style="height: 100px"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row collapse" id="antecedentes">
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    VÍNCULOS
+                  </div>
+                  <div class="card-body">
+                    <textarea class="form-control" id="PersonalidadeVÍNCULOS" style="height: 100px"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    FRAQUEZAS
+                  </div>
+                  <div class="card-body">
+                    <textarea class="form-control" id="PersonalidadeFRAQUEZAS" style="height: 100px"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--inicio informações antecedentes-->
+
+
+
+
+
+
+
+
+
           </div>
         </div>
       </form>
