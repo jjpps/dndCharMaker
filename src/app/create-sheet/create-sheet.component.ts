@@ -39,12 +39,10 @@ export class CreateSheetComponent implements OnInit {
   next() {
     if (this.step == 1) {
       this.personal_step = true;
-      if (this.personalDetails.invalid) { return }
       this.step++
     }
     if (this.step == 2) {
       this.address_step = true;
-      if (this.addressDetails.invalid) { return }
       this.step++;
     }
   }
