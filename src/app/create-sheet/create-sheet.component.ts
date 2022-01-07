@@ -12,8 +12,10 @@ export class CreateSheetComponent implements OnInit {
   personal_step = false;
   address_step = false;
   education_step = false;
-  step = 1;
-  constructor(private formBuilder: FormBuilder) { }
+  step = 0;
+  constructor(private formBuilder: FormBuilder) {
+    this.step = 1;
+  }
 
   ngOnInit(): void {
     this.personalDetails = this.formBuilder.group({
@@ -40,11 +42,14 @@ export class CreateSheetComponent implements OnInit {
     if (this.step == 1) {
       this.personal_step = true;
       this.step++
+      return;
     }
     if (this.step == 2) {
       this.address_step = true;
       this.step++;
+      return;
     }
+    console.log(this.step);
   }
   previous() {
     this.step--
