@@ -2,93 +2,517 @@
   <div class="row">
 
     <div class="col">
-      <br>
-      <div class="btn-group-vertical">
-        <button type="button" class="btn btn-outline-primary">Iniciar</button>
-        &nbsp;
-        <button type="button" class="btn btn-outline-primary">Iniciar</button>
-        &nbsp;
-        <button type="button" class="btn btn-outline-primary">Iniciar</button>
-        &nbsp;
-        <button type="button" class="btn btn-outline-primary">Iniciar</button>
-        &nbsp;
-        <button type="button" class="btn btn-outline-primary">Iniciar</button>
-        &nbsp;
-        <button type="button" class="btn btn-outline-primary">Iniciar</button>
 
-      </div>
     </div>
 
     <div class="col-10">
-      &nbsp;
-      <div class="text-center">
-        <div class="shadow-lg p-3 mb-5 bg-white rounded">
-          <div class="row">
-            <div class="col-4">
-              <div class="form-floating">
-                <input type="text" class="form-control" id="nomeChar" placeholder="Baldur">
-                <label for="nomeChar">Nome do Personagem</label>
+      <form [formGroup]="checkoutForm" class="form">
+
+        <div class="">
+          <div class="shadow-lg p-3 mb-5 bg-white rounded">
+            <!--inicio informações base-->
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-primary dropdown-toggle text-center"
+                data-bs-toggle="collapse" data-bs-target="#Base" aria-expanded="false" aria-controls="Base"> Informações
+                Base </button>
+            </div>
+            &nbsp;
+            <div class="row collapse " id="Base">
+              <div class="col-sm-4">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="nomeChar" placeholder="Baldur">
+                  <label for="nomeChar">Nome do Personagem</label>
+                </div>
+              </div>
+              <div class="col-sm-8">
+                <div class="row">
+                  <div class="col-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="Class" placeholder="Class" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Classe">
+                      <label for="Class">Classe</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="Level" placeholder="Level" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Level">
+                      <label for="Level">Level</label>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="Altura" placeholder="Altura" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Altura">
+                      <label for="Altura">Altura</label>
+                    </div>
+                  </div>
+                  <div class="col-sm">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="NomeJogador" placeholder="Nome Jogador"
+                        data-bs-toggle="tooltip" data-bs-placement="top" title="Nome do Jogador">
+                      <label for="NomeJogador">Nome do Jogador</label>
+                    </div>
+                  </div>
+                </div>
+                &nbsp;
+                <div class="row">
+                  <div class="col-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="Raca" placeholder="Raça" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Raça">
+                      <label for="Raca">Raça</label>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="Idade" placeholder="Idade" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Idade">
+                      <label for="Idade">Idade</label>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="Proficiencia" placeholder="Proficiencia"
+                        data-bs-toggle="tooltip" data-bs-placement="top" title="Proficiencia">
+                      <label for="Proficiencia">Proficiencia</label>
+                    </div>
+                  </div>
+                  <div class="col-2">
+                    <div class="form-floating">
+                      <input type="number" class="form-control" id="EXP" placeholder="EXP" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="EXP">
+                      <label for="EXP">EXP</label>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="col-8">
+            <!--fim informações base-->
+            <hr />
+            <!--inicio informações atributos-->
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="collapse"
+                data-bs-target="#atibutos" aria-expanded="false" aria-controls="atibutos"> Atributos </button>
+            </div>
+            &nbsp;
+            <div class="row collapse" id="atibutos">
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    FORÇA
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                  <div class="card-footer">
+                    <span class="badge bg-primary">+0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    DESTREZA
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                  <div class="card-footer">
+                    <span class="badge bg-primary">+0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    CONSTITUIÇÃO
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                  <div class="card-footer">
+                    <span class="badge bg-primary">+0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    INTELIGÊNCIA
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                  <div class="card-footer">
+                    <span class="badge bg-primary">+0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    SABEDORIA
+                  </div>
+                  <div class="card-body  ">
+                    <input type="number" class="form-control  text-center" value="10" />
+                  </div>
+                  <div class="card-footer">
+                    <span class="badge bg-primary">+0</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    CARISMA
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                  <div class="card-footer">
+                    <span class="badge bg-primary">+0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row collapse" id="atibutos">
+
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    Armadura
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    Iniciativa
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    Deslocamento
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    Vida Maxima
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                  <div class="card-footer">
+                    <span class="badge bg-primary">Dado de Vida D10</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    Vida Atual </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="10" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    Vida Temporaria
+                  </div>
+                  <div class="card-body">
+                    <input type="number" class="form-control text-center" value="0" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!--fim informações atributos-->
+            <hr />
+            <!--inicio informações antecedentes-->
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="collapse"
+                data-bs-target="#antecedentes" aria-expanded="false" aria-controls="antecedentes"> Antecedentes
+              </button>
+            </div>
+            &nbsp;
+            <div class="row collapse" id="antecedentes">
+              <div class="col-sm">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="Alinhamento" placeholder="Alinhamento"
+                    data-bs-toggle="tooltip" data-bs-placement="top" title="Alinhamento">
+                  <label for="Alinhamento">Alinhamento</label>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="TxtAntecedente" placeholder="Antecedente"
+                    data-bs-toggle="tooltip" data-bs-placement="top" title="Antecedente">
+                  <label for="TxtAntecedente">Antecedente</label>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row collapse" id="antecedentes">
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    TRAÇOS DE PERSONALIDADE
+                  </div>
+                  <div class="card-body">
+                    <textarea class="form-control" id="Personalidadetraco" style="height: 100px"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    IDEAIS
+                  </div>
+                  <div class="card-body">
+                    <textarea class="form-control" id="PersonalidadeIdeais" style="height: 100px"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br>
+            <div class="row collapse" id="antecedentes">
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    VÍNCULOS
+                  </div>
+                  <div class="card-body">
+                    <textarea class="form-control" id="PersonalidadeVÍNCULOS" style="height: 100px"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="card text-center">
+                  <div class="card-header">
+                    FRAQUEZAS
+                  </div>
+                  <div class="card-body">
+                    <textarea class="form-control" id="PersonalidadeFRAQUEZAS" style="height: 100px"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--fim informações antecedentes-->
+            <hr>
+            <!--inicio informações pericias-->
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-success dropdown-toggle" data-bs-toggle="collapse"
+                data-bs-target="#pericias" aria-expanded="false" aria-controls="pericias"> Perícias </button>
+            </div>
+            &nbsp;
+            <div class="row collapse" id="pericias">
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Atletismo" value="Atletismo">
+                  <label class="form-check-label">Atletismo </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Prestidigitação" value="Prestidigitação">
+                  <label class="form-check-label">Prestidigitação </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Arcanismo" value="Arcanismo">
+                  <label class="form-check-label">Arcanismo </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="História" value="História">
+                  <label class="form-check-label">História </label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Investigação" value="Investigação">
+                  <label class="form-check-label">Investigação </label>
+                </div>
+
+              </div>
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Natureza" value="Natureza">
+                  <label class="form-check-label">Natureza</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Religião" value="Religião">
+                  <label class="form-check-label">Religião</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="AdestrarAnimais" value="AdestrarAnimais">
+                  <label class="form-check-label">Adestrar Animais</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Intuição" value="Intuição">
+                  <label class="form-check-label">Intuição</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Medicina" value="Medicina">
+                  <label class="form-check-label">Medicina</label>
+                </div>
+
+              </div>
+              <div class="col-sm-4">
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Percepção" value="Percepção">
+                  <label class="form-check-label">Percepção</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Sobrevivência" value="Sobrevivência">
+                  <label class="form-check-label">Sobrevivência</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Atuação" value="Atuação">
+                  <label class="form-check-label">Atuação</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Enganação" value="Enganação">
+                  <label class="form-check-label">Enganação</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Intimidação" value="Intimidação">
+                  <label class="form-check-label">Intimidação</label>
+                </div>
+
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="Persuasão" value="Persuasão">
+                  <label class="form-check-label">Persuasão</label>
+                </div>
+
+
+              </div>
+            </div>
+            <!--fim informações pericias-->
+            <hr>
+            <!--inicio informações equipamento-->
+            <div class="text-center">
+              <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="collapse"
+                data-bs-target="#Equipamento" aria-expanded="false" aria-controls="Equipamento"> Equipamento </button>
+            </div>
+            &nbsp;
+            <div class="row collapse" id="Equipamento">
               <div class="row">
-                <div class="col-3">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="Class" placeholder="Class" data-bs-toggle="tooltip"
-                      data-bs-placement="top" title="Classe">
-                    <label for="Class">Classe</label>
+                <div class="col-sm">
+                  <div class="card text-center">
+                    <div class="card-header">
+                      Peças de Cobre
+                    </div>
+                    <div class="card-body">
+                      <input type="number" class="form-control text-center" value="10" />
+                    </div>
                   </div>
                 </div>
-                <div class="col-2">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="Level" placeholder="Level" data-bs-toggle="tooltip"
-                      data-bs-placement="top" title="Level">
-                    <label for="Level">Level</label>
+                <div class="col-sm">
+                  <div class="card text-center">
+                    <div class="card-header">
+                      Peças de Prata
+                    </div>
+                    <div class="card-body">
+                      <input type="number" class="form-control text-center" value="10" />
+                    </div>
                   </div>
                 </div>
-                <div class="col-3">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="Antecedente" placeholder="Antecedente"
-                      data-bs-toggle="tooltip" data-bs-placement="top" title="Antecedente">
-                    <label for="Antecedente">Antecedente</label>
+                <div class="col-sm">
+                  <div class="card text-center">
+                    <div class="card-header">
+                      Peças de electrum
+                    </div>
+                    <div class="card-body">
+                      <input type="number" class="form-control text-center" value="10" />
+                    </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="NomeJogador" placeholder="Nome Jogador"
-                      data-bs-toggle="tooltip" data-bs-placement="top" title="Nome do Jogador">
-                    <label for="NomeJogador">Nome do Jogador</label>
+                <div class="col-sm">
+                  <div class="card text-center">
+                    <div class="card-header">
+                      Peças de Ouro
+                    </div>
+                    <div class="card-body">
+                      <input type="number" class="form-control text-center" value="10" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="card text-center">
+                    <div class="card-header">
+                      Peças de Platina
+                    </div>
+                    <div class="card-body">
+                      <input type="number" class="form-control text-center" value="10" />
+                    </div>
                   </div>
                 </div>
               </div>
               &nbsp;
               <div class="row">
-                <div class="col-3">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="Raca" placeholder="Raça" data-bs-toggle="tooltip"
-                      data-bs-placement="top" title="Raça">
-                    <label for="Raca">Raça</label>
-                  </div>
+                <div class="text-center">
+                  <br>
+                  <h3>
+                    Itens
+                  </h3>
                 </div>
-                <div class="col-5">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="Alinhamento" placeholder="Alinhamento"
-                      data-bs-toggle="tooltip" data-bs-placement="top" title="Alinhamento">
-                    <label for="Alinhamento">Alinhamento</label>
-                  </div>
-                </div>
-                <div class="col-2">
-                  <div class="form-floating">
-                    <input type="number" class="form-control" id="EXP" placeholder="EXP" data-bs-toggle="tooltip"
-                      data-bs-placement="top" title="EXP">
-                    <label for="EXP">EXP</label>
-                  </div>
-                </div>
+                <table class="table table-bordered border-primary">
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">Descricao</th>
+                      <th scope="col">Qtd</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+
+                      <td>Armadura Leve</td>
+                      <td>+5 CA </td>
+                      <td>1</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
+            <!--inicio informações equipamento-->
+
+
+
+
           </div>
         </div>
-      </div>
+      </form>
+
     </div>
     <div class="col">
 
